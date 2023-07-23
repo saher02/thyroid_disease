@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thyroid Disease Detection </title>
+    <style>
+        body {
+            background-color: pink;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Thyroid Disease Detection</h1>
+    <form method="post" action="/predict">
+        <label>AGE</label><br>
+        <input type="number" name="age"><br><br>
+
+        <label>SEX</label><br>
+        <input type="number" name="sex"><br><br>
+
+        <label>SICK</label><br>
+        <input type="number" name="sick"><br><br>
+
+        <label>PREGNANT</label><br>
+        <input type="number" name="pregnant"><br><br>
+
+        <label>THYROID SURGERY</label><br>
+        <input type="number" name="thyroid surgery"><br><br>
+
+        <label>I131 TREATMENT</label><br>
+        <input type="number" name="I131 treatment"><br><br>
+
+        <label>LITHIUM</label><br>
+        <input type="number" name="lithium"><br><br>
+
+        
+        <label>GOITRE</label><br>
+        <input type="number" name="goitre"><br><br>
+
+        
+        <label>TUMOR</label><br>
+        <input type="number" name="tumor"><br><br>
+
+        <label>TSH</label><br>
+        <input type="number" name="TSH" step="0.01"><br><br>
+
+        <label>T3</label><br>
+        <input type="number" name="T3" step="0.01"><br><br>
+        
+        <label>TT4</label><br>
+        <input type="number" name="TT4" step="0.01"><br><br>
+
+        <label>T4U</label><br>
+        <input type="number" name="T4U" step="0.01"><br><br>
+
+        <label>FTI</label><br>
+        <input type="number" name="FTI" step="0.01"><br><br>
+
+        <input type = "submit" value = "Predict"><br><br>
+
+    </form>
+    <!-- <p>result: <span id="result"></span></p> -->
+    {% if result %}
+    <p>result: {{ result }}</p>
+    {% endif %}
+</body>
+</html>
